@@ -12,43 +12,33 @@ class App extends React.Component {
     super(props);
     this.state = {
       items:[],
-     
-     
         text:'',
         drops:'',
         key:''
-     
     }
   
   }
   nameHandler = (e) =>{
     this.setState({
-      
         text: e.target.value,
         key: Date.now()
-      
     })
   }
   dropHandler = (e) => {
     this.setState({
-    
         drops: e.target.value
-      
     })
   }
   addItem = (e) =>{
-   alert(`details: ${this.state.drops} ${this.state.text}`)
     e.preventDefault();
     const newItem = this.state;
     if(newItem.text !==""){
       const items = [...this.state.items, newItem];
     this.setState({
       items: items,
-     
         text:'',
         drops:'',
         key:''
-      
     })
     }
   }
@@ -58,7 +48,6 @@ class App extends React.Component {
     this.setState({
       items: filteredItems
     })
-
   }
   setUpdate = (text,key) => {
     const items = this.state.items;
@@ -70,7 +59,6 @@ class App extends React.Component {
     this.setState({
       items: items
     })
-    
    
   }
  render(){
@@ -97,12 +85,9 @@ class App extends React.Component {
         
           <ListItems items={this.state.items} deleteItem={this.deleteItem} setUpdate={this.setUpdate}
          />
-        
-     
     </div> </header>
   );
  }
 }
-
 
 export default App;
