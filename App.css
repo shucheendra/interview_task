@@ -1,0 +1,75 @@
+body{
+    background-color:white;
+  }
+  .nav{
+    height: 50px;
+    background-color: black;
+    color: blanchedalmond;
+    font-size: 40px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 0.1em;
+    
+  }
+  .App{
+    background-color: #e2ddec;
+    min-height:0px;
+    width: 400px;
+    margin-left: 400px;
+    position: absolute;
+    margin-top: 50px;
+  }
+  .mainContent{
+    background-color: rgb(142, 173, 164);
+    width: 300px;
+    height: 400px;
+    position: fixed;
+    margin-left: 50px;
+    margin-top: 50px;
+  }
+  h3 {
+    text-align: center;
+    color:white;
+  }
+  #to-do-form  input{
+    background-color: rgba(27, 112, 137, 1);
+    border: 0; 
+    color: #fff;
+    width: 200px;
+    height: 50px;
+    margin: 20px;
+    padding: 0 20px;
+    font-size: 18px;
+    border-radius: 10px;
+  }
+  #to-do-form  select{
+    background-color: rgba(27, 112, 137, 1);
+    border: 0; 
+    color: #fff;
+    width: 240px;
+    height: 50px;
+    margin: 20px;
+    padding: 0 20px;
+    font-size: 18px;
+    border-radius: 10px;
+  }
+  #to-do-form input::placeholder{
+    color: rgba(255,255,255,0.5);
+  }
+  #to-do-form input:focus{
+    outline: none;
+  }
+  #to-do-form button{
+    height: 45px;
+    width:150px;
+    border-radius: 8px;
+    border: 0;
+    background-color:rgb(202, 24, 149); 
+    cursor: pointer;
+    margin: 45px;
+    color: white;
+  }
+  #to-do-form button:focus{
+    outline: none;
+  }
