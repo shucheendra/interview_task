@@ -13,43 +13,42 @@ class App extends React.Component {
     this.state = {
       items:[],
      
-      currentItem:{
+     
         text:'',
-        drops: '',
+        drops:'',
         key:''
-      }
+     
     }
   
   }
   nameHandler = (e) =>{
     this.setState({
-      currentItem:{
+      
         text: e.target.value,
         key: Date.now()
-      }
+      
     })
   }
   dropHandler = (e) => {
     this.setState({
-      currentItem:{
-        drops: e.target.value,
-        key: Date.now()
-      }
+    
+        drops: e.target.value
+      
     })
   }
   addItem = (e) =>{
-   // console.log(`details: ${this.state.currentItem.drops} ${this.state.currentItem.text}`)
+   alert(`details: ${this.state.drops} ${this.state.text}`)
     e.preventDefault();
-    const newItem = this.state.currentItem;
+    const newItem = this.state;
     if(newItem.text !==""){
       const items = [...this.state.items, newItem];
     this.setState({
       items: items,
-      currentItem:{
+     
         text:'',
         drops:'',
         key:''
-      }
+      
     })
     }
   }
@@ -82,7 +81,7 @@ class App extends React.Component {
         <div className="mainContent">
         <form id="to-do-form" onSubmit={this.addItem}>
           <h3>Create User</h3>
-          <input type="text" placeholder="User name" value= {this.state.currentItem.text} onChange={this.nameHandler}></input>
+          <input type="text" placeholder="User name" value= {this.state.text} onChange={this.nameHandler}></input>
         <br></br>
          <select onChange={this.dropHandler} value={this.state.drops} placeholder="Access">
           <option>Access type</option>
